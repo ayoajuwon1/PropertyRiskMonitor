@@ -1,0 +1,32 @@
+name: Refresh NPRM News Signals (Weekly)
+
+on:
+  schedule:
+    - cron: "30 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run job:news
+      - name: Commit news snapshot changes
+        run: |
+          if git diff --quiet; then
+            echo "No data change to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state-news-snapshots.json data/news-metadata.json
+          git commit -m "chore(data): weekly refresh of NPRM news signals"
+          git push

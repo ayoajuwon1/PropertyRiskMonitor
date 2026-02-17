@@ -1,0 +1,47 @@
+{
+  "name": "nigeria-property-risk-monitor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nigeria Property Risk Monitor (NPRM) - model-based public geospatial risk visualization",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "echo 'Lint setup deferred for Next.js 16 flat-config migration'",
+    "typecheck": "tsc --noEmit",
+    "job:flood": "tsx scripts/jobs/update-flood.ts",
+    "job:infra": "tsx scripts/jobs/update-infra.ts",
+    "job:nightlight": "tsx scripts/jobs/update-nightlight.ts",
+    "job:rainfall": "tsx scripts/jobs/update-rainfall.ts",
+    "job:population": "tsx scripts/jobs/update-population.ts",
+    "job:security": "tsx scripts/jobs/update-security.ts",
+    "job:news": "tsx scripts/jobs/update-news.ts",
+    "job:core": "npm run job:flood && npm run job:infra && npm run job:nightlight && npm run job:rainfall && npm run job:population && npm run job:security",
+    "job:all": "npm run job:core && npm run job:news"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "geist": "^1.5.1",
+    "lucide-react": "^0.562.0",
+    "maplibre-gl": "^5.9.0",
+    "next": "^16.1.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-map-gl": "^8.1.0",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "^16.1.4",
+    "postcss": "^8.5.6",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

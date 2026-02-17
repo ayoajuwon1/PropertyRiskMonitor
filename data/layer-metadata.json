@@ -1,0 +1,62 @@
+[
+  {
+    "layer_name": "flood",
+    "display_name": "Flood Exposure",
+    "customer_use_case": "Shows areas where seasonal water and elevation patterns may increase flood-related property risk.",
+    "source_name": "JRC Global Surface Water + SRTM Elevation",
+    "source_url": "https://global-surface-water.appspot.com/",
+    "update_frequency": "quarterly",
+    "last_refresh": "2026-02-17T06:00:57.473Z",
+    "coverage_notes": "State-level risk baseline built from open hydrology and elevation datasets."
+  },
+  {
+    "layer_name": "infrastructure",
+    "display_name": "Road Access",
+    "customer_use_case": "Highlights how easily neighborhoods connect to major road infrastructure.",
+    "source_name": "OpenStreetMap Roads",
+    "source_url": "https://www.openstreetmap.org/",
+    "update_frequency": "weekly",
+    "last_refresh": "2026-02-17T06:00:57.810Z",
+    "coverage_notes": "Distance-to-major-road and road-density proxy at state aggregation level."
+  },
+  {
+    "layer_name": "nightlight",
+    "display_name": "Neighborhood Activity",
+    "customer_use_case": "Indicates development intensity and recent growth momentum from night lights.",
+    "source_name": "NASA VIIRS Black Marble",
+    "source_url": "https://blackmarble.gsfc.nasa.gov/",
+    "update_frequency": "monthly",
+    "last_refresh": "2026-02-17T06:00:58.133Z",
+    "coverage_notes": "Radiance and trend signals converted to a normalized development activity score."
+  },
+  {
+    "layer_name": "rainfall",
+    "display_name": "Rainfall Pressure",
+    "customer_use_case": "Captures abnormal rainfall stress that can affect drainage and resilience.",
+    "source_name": "CHIRPS Precipitation (modeled refresh)",
+    "source_url": "https://www.chc.ucsb.edu/data/chirps",
+    "update_frequency": "monthly",
+    "last_refresh": "2026-02-17T06:26:49.701Z",
+    "coverage_notes": "Rainfall anomaly and volatility signals normalized for property context."
+  },
+  {
+    "layer_name": "population",
+    "display_name": "Population Pressure",
+    "customer_use_case": "Shows demand and occupancy pressure that may influence property risk and service load.",
+    "source_name": "WorldPop Population Estimates (modeled refresh)",
+    "source_url": "https://www.worldpop.org/",
+    "update_frequency": "quarterly",
+    "last_refresh": "2026-02-17T06:26:49.701Z",
+    "coverage_notes": "Population density and growth pressure scores normalized by state."
+  },
+  {
+    "layer_name": "security",
+    "display_name": "Security Pressure",
+    "customer_use_case": "Shows security-related pressure that can affect occupancy, rental stability, and investment confidence.",
+    "source_name": "ACLED Conflict Data (modeled refresh)",
+    "source_url": "https://acleddata.com/",
+    "update_frequency": "weekly",
+    "last_refresh": "2026-02-17T06:41:06.901Z",
+    "coverage_notes": "Incident pressure proxy normalized at state level for investment risk awareness."
+  }
+]
