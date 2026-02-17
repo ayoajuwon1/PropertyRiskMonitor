@@ -128,5 +128,18 @@
     "lng": 3.8828333,
     "map_url": "https://maps.google.com/?q=6.6225556,3.8828333",
     "tags": ["mixed-use", "residential", "lagos"]
+  },
+  {
+    "id": "the-fort",
+    "name": "The Fort",
+    "slug": "the-fort",
+    "state": "Lagos",
+    "city": "Epe",
+    "property_type": "Land Estate",
+    "status": "Active",
+    "lat": 6.6530556,
+    "lng": 4.0147222,
+    "map_url": "https://maps.google.com/?q=6.6530556,4.0147222",
+    "tags": ["land", "estate", "epe", "lagos"]
   }
 ]

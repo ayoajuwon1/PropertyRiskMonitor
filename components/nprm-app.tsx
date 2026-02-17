@@ -162,7 +162,7 @@ export function NprmApp() {
       <NprmHeader locationCount={cells.length} lastRefresh={latestRefresh} />
 
       <div className="relative flex flex-1 md:overflow-hidden">
-        <section className="relative h-[calc(100vh-3.5rem)] flex-1 bg-black md:h-auto md:min-h-0">
+        <section className="relative min-h-[16rem] flex-1 bg-black md:h-auto md:min-h-0">
           {isBootstrapping ? (
             <div className="flex h-full items-center justify-center font-mono text-sm text-[var(--ds-gray-900)]">
               Loading Nigeria property risk insights...

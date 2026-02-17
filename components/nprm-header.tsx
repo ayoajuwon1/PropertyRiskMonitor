@@ -21,8 +21,8 @@ function formatNigeriaTime(value: string): string {
 
 export function NprmHeader({ locationCount, lastRefresh }: NprmHeaderProps) {
   return (
-    <header className="relative flex h-14 items-center justify-between border-b border-[var(--ds-gray-alpha-200)] bg-[var(--ds-background-100)] px-4">
-      <div className="flex items-center gap-3">
+    <header className="relative grid min-h-[4.75rem] grid-cols-[1fr_auto] items-start gap-2 border-b border-[var(--ds-gray-alpha-200)] bg-[var(--ds-background-100)] px-3 py-2 md:flex md:h-14 md:items-center md:justify-between md:px-4 md:py-0">
+      <div className="flex min-w-0 items-center gap-2.5 md:gap-3">
         <div className="relative h-6 w-6 shrink-0">
           <Image
             src="/land-republic-mark.svg"
@@ -33,11 +33,11 @@ export function NprmHeader({ locationCount, lastRefresh }: NprmHeaderProps) {
             priority
           />
         </div>
-        <div className="flex flex-col">
-          <h1 className="font-mono text-sm font-semibold tracking-wide text-[var(--ds-gray-1000)] md:text-base">
+        <div className="min-w-0">
+          <h1 className="font-mono text-[11px] font-semibold leading-tight tracking-wide text-[var(--ds-gray-1000)] sm:text-sm md:text-base">
             Nigeria Property Risk Monitor
           </h1>
-          <p className="font-mono text-[10px] text-[var(--ds-gray-900)] md:text-[11px]">
+          <p className="font-mono text-[9px] leading-tight text-[var(--ds-gray-900)] sm:text-[10px] md:text-[11px]">
             Explore risk signals before you buy, rent, or invest.
           </p>
         </div>
@@ -48,9 +48,9 @@ export function NprmHeader({ locationCount, lastRefresh }: NprmHeaderProps) {
         <span>{locationCount} locations tracked</span>
       </div>
 
-      <div className="text-right font-mono text-[10px] text-[var(--ds-gray-900)] md:text-xs">
+      <div className="text-right font-mono text-[9px] leading-tight text-[var(--ds-gray-900)] sm:text-[10px] md:text-xs">
         <div className="font-semibold uppercase tracking-[0.15em]">Last refresh</div>
-        <div>{lastRefresh ? `${formatNigeriaTime(lastRefresh)} WAT` : "Loading..."}</div>
+        <div className="max-w-[10rem] md:max-w-none">{lastRefresh ? `${formatNigeriaTime(lastRefresh)} WAT` : "Loading..."}</div>
       </div>
     </header>
   );
