@@ -206,9 +206,9 @@ export function NprmApp() {
         </div>
       </footer>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 px-2 pb-[max(env(safe-area-inset-bottom),0.5rem)] md:hidden">
+      <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 pb-[max(env(safe-area-inset-bottom),0.5rem)] md:hidden">
         <div
-          className={`mx-auto w-full max-w-[680px] overflow-hidden rounded-t-xl border border-[var(--ds-gray-alpha-200)] bg-[var(--ds-background-100)]/95 shadow-2xl backdrop-blur transition-transform duration-300 ${mobileBriefTransformClass}`}
+          className={`pointer-events-auto w-full overflow-hidden rounded-t-xl border border-[var(--ds-gray-alpha-200)] bg-[var(--ds-background-100)]/95 shadow-2xl backdrop-blur transition-transform duration-300 ${mobileBriefTransformClass}`}
         >
           <button
             type="button"

@@ -181,6 +181,8 @@ const lightMapStyleUrl =
   process.env.NEXT_PUBLIC_MAP_STYLE_LIGHT_URL ??
   "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
 
+const STATE_HIT_LAYERS = ["state-fill", "state-outline", "state-selected-halo", "state-selected-outline"] as const;
+
 function getMetricLabel(metric: MetricKey): string {
   const config = METRICS.find((item) => item.key === metric);
   return config?.label ?? "Score";
@@ -473,6 +475,40 @@ export function NprmMap({
     },
   };
 
+  const selectedStateFilter = useMemo(
+    () => ["==", ["coalesce", ["get", "id"], ""], selectedCell?.id ?? "__none__"],
+    [selectedCell?.id]
+  );
+
+  const selectedStateHaloLayer: LayerProps = useMemo(
+    () => ({
+      id: "state-selected-halo",
+      type: "line",
+      filter: selectedStateFilter as never,
+      paint: {
+        "line-color": "#2563eb",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 4, 2.6, 9, 5.4] as never,
+        "line-opacity": 0.78,
+        "line-blur": 1.2,
+      },
+    }),
+    [selectedStateFilter]
+  );
+
+  const selectedStateOutlineLayer: LayerProps = useMemo(
+    () => ({
+      id: "state-selected-outline",
+      type: "line",
+      filter: selectedStateFilter as never,
+      paint: {
+        "line-color": "#f8fafc",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 4, 1.15, 9, 2.1] as never,
+        "line-opacity": 0.95,
+      },
+    }),
+    [selectedStateFilter]
+  );
+
   const centroidCircleLayer: LayerProps = {
     id: "state-centroids",
     type: "circle",
@@ -563,7 +599,16 @@ export function NprmMap({
   };
 
   const onMapClick = (event: MapLayerMouseEvent) => {
-    const selectedFeature = event.features?.find((feature) => feature.layer.id === "state-fill");
+    const fallbackFeatures =
+      event.features && event.features.length > 0
+        ? event.features
+        : mapRef.current
+            ?.queryRenderedFeatures(event.point, { layers: [...STATE_HIT_LAYERS] })
+            .filter((feature) => STATE_HIT_LAYERS.includes(feature.layer.id as (typeof STATE_HIT_LAYERS)[number]));
+
+    const selectedFeature = fallbackFeatures?.find((feature) =>
+      STATE_HIT_LAYERS.includes(feature.layer.id as (typeof STATE_HIT_LAYERS)[number])
+    );
     const id = selectedFeature?.properties?.id as string | undefined;
     if (id) {
       onSelectCell(id);
@@ -758,7 +803,7 @@ export function NprmMap({
         mapStyle={mapStyleUrl}
         minZoom={4}
         maxZoom={10}
-        interactiveLayerIds={["state-fill"]}
+        interactiveLayerIds={[...STATE_HIT_LAYERS]}
         onClick={onMapClick}
         onMouseEnter={() => {
           if (mapRef.current) {
@@ -778,6 +823,8 @@ export function NprmMap({
           <Source id="states" type="geojson" data={enrichedStateGeoJson}>
             <Layer {...stateFillLayer} />
             <Layer {...stateOutlineLayer} />
+            <Layer {...selectedStateHaloLayer} />
+            <Layer {...selectedStateOutlineLayer} />
           </Source>
         )}
 
