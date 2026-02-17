@@ -48,6 +48,12 @@ function ensureCellDefaults(cell: Partial<LocationCell>): LocationCell {
     rainfall_anomaly_index: parseNumber(cell.rainfall_anomaly_index),
     population_density_index: parseNumber(cell.population_density_index),
     security_incident_index: parseNumber(cell.security_incident_index),
+    security_confidence_score: parseNumber(cell.security_confidence_score, 0),
+    security_event_count_90d: parseNumber(cell.security_event_count_90d, 0),
+    security_top_threat:
+      typeof cell.security_top_threat === "string" && cell.security_top_threat.length > 0
+        ? (cell.security_top_threat as LocationCell["security_top_threat"])
+        : null,
     last_updated_flood: parseString(cell.last_updated_flood, updatedAt),
     last_updated_infra: parseString(cell.last_updated_infra, updatedAt),
     last_updated_nightlight: parseString(cell.last_updated_nightlight, updatedAt),
@@ -129,11 +135,11 @@ export function deterministicValue(
 
 export function recomputeComposite(cell: LocationCell): LocationCell {
   const floodWeight = Number(process.env.FLOOD_WEIGHT ?? 0.25);
-  const infraWeight = Number(process.env.INFRA_WEIGHT ?? 0.2);
-  const nightlightWeight = Number(process.env.NIGHTLIGHT_WEIGHT ?? 0.15);
+  const infraWeight = Number(process.env.INFRA_WEIGHT ?? 0.1);
+  const nightlightWeight = Number(process.env.NIGHTLIGHT_WEIGHT ?? 0.07);
   const rainfallWeight = Number(process.env.RAINFALL_WEIGHT ?? 0.15);
-  const populationWeight = Number(process.env.POPULATION_WEIGHT ?? 0.1);
-  const securityWeight = Number(process.env.SECURITY_WEIGHT ?? 0.15);
+  const populationWeight = Number(process.env.POPULATION_WEIGHT ?? 0.08);
+  const securityWeight = Number(process.env.SECURITY_WEIGHT ?? 0.35);
 
   const totalWeight =
     floodWeight + infraWeight + nightlightWeight + rainfallWeight + populationWeight + securityWeight;

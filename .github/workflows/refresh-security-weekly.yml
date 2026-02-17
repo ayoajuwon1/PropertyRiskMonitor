@@ -1,15 +1,15 @@
-name: Refresh NPRM Core Layers (Nightly)
+name: Refresh NPRM Security Signals (Weekly)
 
 on:
   schedule:
-    - cron: "15 0 * * *"
+    - cron: "15 2 * * 1"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  refresh-core-layers:
+  refresh-security-signals:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,8 +18,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run job:core-lite
-      - name: Commit data changes
+      - run: npm run job:security
+      - name: Commit security data changes
         run: |
           if git diff --quiet; then
             echo "No data change to commit"
@@ -27,6 +27,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/location-cells.json data/layer-metadata.json data/source-versions.json
-          git commit -m "chore(data): nightly refresh of NPRM core layers"
+          git add data/location-cells.json data/layer-metadata.json data/source-versions.json data/security-events-snapshots.json data/security-state-aggregates.json data/security-metadata.json
+          git commit -m "chore(data): weekly refresh of NPRM security signals"
           git push

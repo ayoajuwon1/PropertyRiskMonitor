@@ -7,6 +7,18 @@ export type LayerName =
   | "security"
   | "news";
 
+export type SecurityThreatCategory =
+  | "kidnapping"
+  | "bandit_attack"
+  | "terror_attack"
+  | "communal_clash"
+  | "armed_robbery"
+  | "cult_violence"
+  | "violent_land_dispute"
+  | "other_security_event";
+
+export type SecuritySourceType = "acled" | "news" | "social";
+
 export interface LocationCell {
   id: string;
   state: string;
@@ -28,6 +40,9 @@ export interface LocationCell {
   rainfall_anomaly_index: number;
   population_density_index: number;
   security_incident_index: number;
+  security_confidence_score: number;
+  security_event_count_90d: number;
+  security_top_threat: SecurityThreatCategory | null;
   last_updated_flood: string;
   last_updated_infra: string;
   last_updated_nightlight: string;
@@ -49,6 +64,11 @@ export interface LayerMetadata {
   coverage_notes: string;
   source_stamp?: string;
   source_checked_at?: string;
+  source_mix?: string[];
+  layer_confidence_score?: number;
+  coverage_quality?: "high" | "medium" | "low";
+  ingest_last_refresh?: string;
+  publish_last_refresh?: string;
 }
 
 export interface SourceVersion {
@@ -135,6 +155,81 @@ export interface NewsMetadata {
   source_stamp: string;
   coverage_notes: string;
   states_processed: number;
+}
+
+export interface SecurityThreatCount {
+  category: SecurityThreatCategory;
+  count: number;
+}
+
+export interface SecurityEvent {
+  id: string;
+  event_id_candidate: string;
+  headline: string;
+  event_date: string;
+  state: string;
+  lga_or_city: string | null;
+  category: SecurityThreatCategory;
+  killed_count: number | null;
+  kidnapped_count: number | null;
+  injured_count: number | null;
+  source_name: string;
+  source_url: string;
+  source_type: SecuritySourceType;
+  confidence: number;
+  relevance: number;
+  is_duplicate_of: string | null;
+  source_query: string;
+  published_at: string;
+  ingestion_stamp: string;
+  contribution: number;
+}
+
+export interface SecurityStateAggregate {
+  state: string;
+  window_start: string;
+  window_end: string;
+  raw_security_pressure: number;
+  security_incident_index: number;
+  security_score: number;
+  security_confidence_score: number;
+  security_event_count_90d: number;
+  security_top_threat: SecurityThreatCategory | null;
+  top_threats: SecurityThreatCount[];
+  source_mix: Record<SecuritySourceType, number>;
+  average_event_confidence: number;
+  average_relevance: number;
+  last_ingest_refresh: string;
+  ingest_source_stamp: string;
+  publish_source_stamp: string;
+}
+
+export interface SecurityMetadata {
+  source_name: string;
+  source_url: string;
+  ingest_frequency: "weekly";
+  publish_frequency: "quarterly";
+  last_ingest_refresh: string;
+  last_publish_refresh: string;
+  ingest_source_stamp: string;
+  publish_source_stamp: string;
+  coverage_notes: string;
+  source_mix: string[];
+  states_processed: number;
+  events_processed_90d: number;
+  national_confidence_score: number;
+}
+
+export interface SecurityLocationDetails {
+  event_count_90d: number;
+  top_threat: SecurityThreatCategory | null;
+  top_threats: SecurityThreatCount[];
+  confidence_score: number;
+  last_ingest_refresh: string | null;
+  last_publish_refresh: string | null;
+  ingest_source_stamp: string | null;
+  publish_source_stamp: string | null;
+  source_mix: string[];
 }
 
 export const REQUIRED_DISCLAIMER =

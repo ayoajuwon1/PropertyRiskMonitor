@@ -13,6 +13,7 @@ This platform is a decision-support model, not an official hazard authority.
 - Population Pressure (WorldPop-style density proxy, quarterly source stamp)
 - Security Pressure (ACLED-style incident pressure proxy, weekly source stamp)
 - News Signals (Google News RSS + Wikipedia context, weekly source stamp)
+  - Security pipeline v2: ACLED + Google Boolean discovery + Gemini/heuristic extraction (weekly ingest, quarterly publish)
 
 ## Why updates stay consistent
 
@@ -58,6 +59,7 @@ npm run dev
 - `GET /api/location/:id`
 - `GET /api/layers`
 - `GET /api/state-context/:state`
+- `GET /api/security-events?state=<state>&limit=<n>`
 
 ## Jobs
 
@@ -68,12 +70,15 @@ npm run dev
 - `npm run job:population`
 - `npm run job:security`
 - `npm run job:news`
+- `npm run job:core-lite`
 - `npm run job:core`
 - `npm run job:all`
+- `npm run test:security-signals`
 
 ## Automation
 
 - `refresh-layers-nightly.yml`: runs core layer jobs nightly and commits only when source stamps change.
+- `refresh-security-weekly.yml`: runs Nigeria security intelligence ingest weekly (with quarterly publish gate).
 - `refresh-news-weekly.yml`: runs news ingestion weekly and commits only when the source week changes.
 
 ## Disclaimer (required UI text)

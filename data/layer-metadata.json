@@ -53,10 +53,10 @@
     "layer_name": "security",
     "display_name": "Security Pressure",
     "customer_use_case": "Shows security-related pressure that can affect occupancy, rental stability, and investment confidence.",
-    "source_name": "ACLED Conflict Data (modeled refresh)",
-    "source_url": "https://acleddata.com/",
-    "update_frequency": "weekly",
-    "last_refresh": "2026-02-17T06:41:06.901Z",
-    "coverage_notes": "Incident pressure proxy normalized at state level for investment risk awareness."
+    "source_name": "ACLED + Google News Boolean + Gemini extraction",
+    "source_url": "https://acleddata.com/, https://news.google.com/rss",
+    "update_frequency": "quarterly",
+    "last_refresh": "2026-02-17T20:59:29.020Z",
+    "coverage_notes": "Quarterly-published security baseline from a rolling 90-day Nigeria-specific event pipeline with weekly ingestion."
   }
 ]

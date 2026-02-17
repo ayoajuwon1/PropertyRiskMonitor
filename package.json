@@ -14,10 +14,12 @@
     "job:nightlight": "tsx scripts/jobs/update-nightlight.ts",
     "job:rainfall": "tsx scripts/jobs/update-rainfall.ts",
     "job:population": "tsx scripts/jobs/update-population.ts",
-    "job:security": "tsx scripts/jobs/update-security.ts",
+    "job:security": "tsx scripts/jobs/update-security-signals.ts",
     "job:news": "tsx scripts/jobs/update-news.ts",
-    "job:core": "npm run job:flood && npm run job:infra && npm run job:nightlight && npm run job:rainfall && npm run job:population && npm run job:security",
-    "job:all": "npm run job:core && npm run job:news"
+    "job:core-lite": "npm run job:flood && npm run job:infra && npm run job:nightlight && npm run job:rainfall && npm run job:population",
+    "job:core": "npm run job:core-lite && npm run job:security",
+    "job:all": "npm run job:core && npm run job:news",
+    "test:security-signals": "tsx scripts/tests/security-signals.spec.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

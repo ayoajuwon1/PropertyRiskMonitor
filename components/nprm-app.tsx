@@ -5,12 +5,20 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { NprmHeader } from "@/components/nprm-header";
 import { NprmLocationDrawer } from "@/components/nprm-location-drawer";
 import { NprmMap, type MetricKey } from "@/components/map/nprm-map";
-import type { InventoryListing, LayerMetadata, LocationCell, MapDataResponse, StateContext } from "@/lib/types";
+import type {
+  InventoryListing,
+  LayerMetadata,
+  LocationCell,
+  MapDataResponse,
+  SecurityLocationDetails,
+  StateContext,
+} from "@/lib/types";
 import { REQUIRED_DISCLAIMER } from "@/lib/types";
 import landRepublicInventoryData from "@/data/land-republic-inventory.json";
 
 interface SelectedLocationResponse extends LocationCell {
   layers: LayerMetadata[];
+  security_details?: SecurityLocationDetails;
 }
 
 type MobileBriefState = "collapsed" | "peek" | "expanded";

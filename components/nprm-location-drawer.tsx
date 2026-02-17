@@ -20,6 +20,7 @@ import type {
   LayerMetadata,
   LocationCell,
   MapDataResponse,
+  SecurityLocationDetails,
   StateContext,
   StateNewsItem,
 } from "@/lib/types";
@@ -27,6 +28,7 @@ import { REQUIRED_DISCLAIMER } from "@/lib/types";
 
 interface DetailedLocationResponse extends LocationCell {
   layers: LayerMetadata[];
+  security_details?: SecurityLocationDetails;
 }
 
 interface DisputeTag {
@@ -36,7 +38,7 @@ interface DisputeTag {
 }
 
 interface LocationDrawerProps {
-  selectedLocation: (LocationCell & { layers: LayerMetadata[] }) | null;
+  selectedLocation: (LocationCell & { layers: LayerMetadata[]; security_details?: SecurityLocationDetails }) | null;
   fallbackLayers: LayerMetadata[];
   stateContext: StateContext | null;
   activeMetrics: MetricKey[];
@@ -88,6 +90,24 @@ const INVESTOR_PROFILES: Array<{
     description: "Prioritizes downside protection for longer hold timelines.",
   },
 ];
+
+const COMPOSITE_WEIGHTS = {
+  flood: 0.25,
+  infraRisk: 0.1,
+  nightlight: 0.07,
+  rainfall: 0.15,
+  population: 0.08,
+  security: 0.35,
+};
+
+function formatThreatLabel(value: string | null): string {
+  if (!value) {
+    return "No dominant threat";
+  }
+  return value
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
 
 function hashSignal(value: string): number {
   let hash = 0;
@@ -155,6 +175,10 @@ function cadenceStatus(
 }
 
 function calculateLayerConfidence(layer: LayerMetadata): number {
+  if (typeof layer.layer_confidence_score === "number") {
+    return clampScore(layer.layer_confidence_score);
+  }
+
   const cadence = cadenceStatus(layer.update_frequency, layer.last_refresh).label;
 
   let score = 70;
@@ -303,12 +327,40 @@ function isMetricSelection(active: MetricKey[], target: MetricKey[]): boolean {
   return active.length === target.length && target.every((metric, index) => active[index] === metric);
 }
 
-function ScoreCard({ title, value, subtitle }: { title: string; value: number; subtitle: string }) {
+function ScoreCard({
+  title,
+  value,
+  subtitle,
+  details = [],
+  badge,
+}: {
+  title: string;
+  value: number;
+  subtitle: string;
+  details?: string[];
+  badge?: string;
+}) {
   return (
     <div className="rounded-lg border border-[var(--ds-gray-alpha-200)] bg-[var(--ds-gray-alpha-100)] p-3">
-      <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--ds-gray-900)]">{title}</div>
+      <div className="flex items-center justify-between gap-2">
+        <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--ds-gray-900)]">{title}</div>
+        {badge ? (
+          <span className="inline-flex items-center rounded border border-[var(--ds-gray-alpha-200)] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.09em] text-[var(--ds-gray-900)]">
+            {badge}
+          </span>
+        ) : null}
+      </div>
       <div className="mt-1 font-mono text-2xl font-semibold tabular-nums text-[var(--ds-gray-1000)]">{value}</div>
       <div className="font-mono text-[11px] text-[var(--ds-gray-900)]">{subtitle}</div>
+      {details.length > 0 ? (
+        <div className="mt-1 space-y-0.5">
+          {details.map((detail) => (
+            <div key={detail} className="font-mono text-[10px] text-[var(--ds-gray-900)]">
+              {detail}
+            </div>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -620,6 +672,14 @@ export function NprmLocationDrawer({
     return computeNigerianMarketLayerScores(selectedLocation, disputeTagPressure);
   }, [selectedLocation, disputeTagPressure]);
 
+  const securityDetails = selectedLocation?.security_details;
+  const securitySourceMixLabel = useMemo(() => {
+    if (!securityDetails?.source_mix?.length) {
+      return "n/a";
+    }
+    return securityDetails.source_mix.join(" + ");
+  }, [securityDetails?.source_mix]);
+
   const matchedInventoryListings = useMemo(() => {
     if (!selectedLocation) {
       return inventoryListings;
@@ -721,44 +781,44 @@ export function NprmLocationDrawer({
     };
 
     const previousComposite = clampScore(
-      0.25 * previousEstimate.flood +
-        0.2 * (100 - previousEstimate.infra) +
-        0.15 * previousEstimate.nightlight +
-        0.15 * previousEstimate.rainfall +
-        0.1 * previousEstimate.population +
-        0.15 * previousEstimate.security
+      COMPOSITE_WEIGHTS.flood * previousEstimate.flood +
+        COMPOSITE_WEIGHTS.infraRisk * (100 - previousEstimate.infra) +
+        COMPOSITE_WEIGHTS.nightlight * previousEstimate.nightlight +
+        COMPOSITE_WEIGHTS.rainfall * previousEstimate.rainfall +
+        COMPOSITE_WEIGHTS.population * previousEstimate.population +
+        COMPOSITE_WEIGHTS.security * previousEstimate.security
     );
 
     const deltas = [
       {
         label: "Flood pressure",
         delta: selectedLocation.flood_score - previousEstimate.flood,
-        weightedImpact: 0.25 * (selectedLocation.flood_score - previousEstimate.flood),
+        weightedImpact: COMPOSITE_WEIGHTS.flood * (selectedLocation.flood_score - previousEstimate.flood),
       },
       {
         label: "Road access risk",
         delta: previousEstimate.infra - selectedLocation.infra_score,
-        weightedImpact: 0.2 * (previousEstimate.infra - selectedLocation.infra_score),
+        weightedImpact: COMPOSITE_WEIGHTS.infraRisk * (previousEstimate.infra - selectedLocation.infra_score),
       },
       {
         label: "Neighborhood activity",
         delta: selectedLocation.nightlight_score - previousEstimate.nightlight,
-        weightedImpact: 0.15 * (selectedLocation.nightlight_score - previousEstimate.nightlight),
+        weightedImpact: COMPOSITE_WEIGHTS.nightlight * (selectedLocation.nightlight_score - previousEstimate.nightlight),
       },
       {
         label: "Rainfall pressure",
         delta: selectedLocation.rainfall_score - previousEstimate.rainfall,
-        weightedImpact: 0.15 * (selectedLocation.rainfall_score - previousEstimate.rainfall),
+        weightedImpact: COMPOSITE_WEIGHTS.rainfall * (selectedLocation.rainfall_score - previousEstimate.rainfall),
       },
       {
         label: "Population pressure",
         delta: selectedLocation.population_score - previousEstimate.population,
-        weightedImpact: 0.1 * (selectedLocation.population_score - previousEstimate.population),
+        weightedImpact: COMPOSITE_WEIGHTS.population * (selectedLocation.population_score - previousEstimate.population),
       },
       {
         label: "Security pressure",
         delta: selectedLocation.security_score - previousEstimate.security,
-        weightedImpact: 0.15 * (selectedLocation.security_score - previousEstimate.security),
+        weightedImpact: COMPOSITE_WEIGHTS.security * (selectedLocation.security_score - previousEstimate.security),
       },
     ]
       .sort((left, right) => Math.abs(right.weightedImpact) - Math.abs(left.weightedImpact))
@@ -768,6 +828,7 @@ export function NprmLocationDrawer({
       previousComposite,
       delta: selectedLocation.composite_risk_score - previousComposite,
       topDrivers: deltas,
+      securityImpact: COMPOSITE_WEIGHTS.security * (selectedLocation.security_score - previousEstimate.security),
     };
   }, [selectedLocation]);
 
@@ -778,7 +839,7 @@ export function NprmLocationDrawer({
 
     const growthRelief = selectedLocation.nightlight_trend_delta > 0 ? Math.min(8, selectedLocation.nightlight_trend_delta * 0.8) : 0;
     const climateRisk = Math.max(0, selectedLocation.rainfall_score - 58) * 0.18;
-    const securityRisk = Math.max(0, selectedLocation.security_score - 60) * 0.15;
+    const securityRisk = Math.max(0, selectedLocation.security_score - 60) * COMPOSITE_WEIGHTS.security;
 
     const waitScore = clampScore(selectedLocation.composite_risk_score + climateRisk + securityRisk - growthRelief);
 
@@ -1069,6 +1130,23 @@ export function NprmLocationDrawer({
                   title="Security pressure"
                   value={selectedLocation.security_score}
                   subtitle={`Incident pressure index: ${selectedLocation.security_incident_index}`}
+                  badge={`Confidence ${securityDetails?.confidence_score ?? selectedLocation.security_confidence_score ?? 0}/100`}
+                  details={[
+                    `90-day events: ${securityDetails?.event_count_90d ?? selectedLocation.security_event_count_90d ?? 0}`,
+                    `Top threat: ${formatThreatLabel(securityDetails?.top_threat ?? selectedLocation.security_top_threat ?? null)}`,
+                    ...(securityDetails?.top_threats?.length
+                      ? [
+                          `Top mix: ${securityDetails.top_threats
+                            .map((entry) => `${formatThreatLabel(entry.category)} (${entry.count})`)
+                            .join(", ")}`,
+                        ]
+                      : []),
+                    `Signal refresh: ${
+                      securityDetails?.last_ingest_refresh
+                        ? `${formatDateTime(securityDetails.last_ingest_refresh)} WAT`
+                        : "n/a"
+                    }`,
+                  ]}
                 />
               </div>
 
@@ -1329,6 +1407,14 @@ export function NprmLocationDrawer({
                       </div>
                     ))}
                   </div>
+                  <div className="mt-2 border-t border-[var(--ds-gray-alpha-200)] pt-2">
+                    <div className="flex items-center justify-between gap-2 font-mono text-[11px] text-[var(--ds-gray-900)]">
+                      <span>Security weighted contribution</span>
+                      <span className="tabular-nums text-[var(--ds-gray-1000)]">
+                        {formatDelta(Number(scoreExplanation.securityImpact.toFixed(1)))}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               ) : null}
 
@@ -1582,6 +1668,17 @@ export function NprmLocationDrawer({
                     Frequency: {layer.update_frequency} | Last refresh: {formatDateTime(layer.last_refresh)} WAT
                   </div>
                   <div className="mt-1 font-mono text-[11px] text-[var(--ds-gray-900)]">Source cycle: {layer.source_stamp ?? "n/a"}</div>
+                  {layer.layer_name === "security" ? (
+                    <div className="mt-1 space-y-0.5 font-mono text-[11px] text-[var(--ds-gray-900)]">
+                      <div>Source mix: {layer.source_mix?.join(" + ") || securitySourceMixLabel}</div>
+                      <div>
+                        Ingest refresh: {layer.ingest_last_refresh ? `${formatDateTime(layer.ingest_last_refresh)} WAT` : "n/a"}
+                      </div>
+                      <div>
+                        Publish refresh: {layer.publish_last_refresh ? `${formatDateTime(layer.publish_last_refresh)} WAT` : "n/a"}
+                      </div>
+                    </div>
+                  ) : null}
                   <a
                     href={layer.source_url}
                     target="_blank"
