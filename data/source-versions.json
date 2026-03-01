@@ -4,16 +4,16 @@
     "checked_at": "2026-02-17T06:00:57.473Z"
   },
   "infrastructure": {
-    "source_stamp": "2026-W09",
-    "checked_at": "2026-02-22T03:16:01.390Z"
+    "source_stamp": "2026-W10",
+    "checked_at": "2026-03-01T03:22:57.968Z"
   },
   "nightlight": {
-    "source_stamp": "2026-02",
-    "checked_at": "2026-02-17T06:00:58.133Z"
+    "source_stamp": "2026-03",
+    "checked_at": "2026-03-01T03:22:58.441Z"
   },
   "rainfall": {
-    "source_stamp": "2026-02",
-    "checked_at": "2026-02-17T06:26:49.701Z"
+    "source_stamp": "2026-03",
+    "checked_at": "2026-03-01T03:22:58.913Z"
   },
   "population": {
     "source_stamp": "2026-Q1",

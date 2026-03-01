@@ -16,7 +16,7 @@
     "source_name": "OpenStreetMap Roads",
     "source_url": "https://www.openstreetmap.org/",
     "update_frequency": "weekly",
-    "last_refresh": "2026-02-22T03:16:01.390Z",
+    "last_refresh": "2026-03-01T03:22:57.968Z",
     "coverage_notes": "Distance-to-major-road and road-density proxy at state aggregation level."
   },
   {
@@ -26,7 +26,7 @@
     "source_name": "NASA VIIRS Black Marble",
     "source_url": "https://blackmarble.gsfc.nasa.gov/",
     "update_frequency": "monthly",
-    "last_refresh": "2026-02-17T06:00:58.133Z",
+    "last_refresh": "2026-03-01T03:22:58.441Z",
     "coverage_notes": "Radiance and trend signals converted to a normalized development activity score."
   },
   {
@@ -36,7 +36,7 @@
     "source_name": "CHIRPS Precipitation (modeled refresh)",
     "source_url": "https://www.chc.ucsb.edu/data/chirps",
     "update_frequency": "monthly",
-    "last_refresh": "2026-02-17T06:26:49.701Z",
+    "last_refresh": "2026-03-01T03:22:58.913Z",
     "coverage_notes": "Rainfall anomaly and volatility signals normalized for property context."
   },
   {
