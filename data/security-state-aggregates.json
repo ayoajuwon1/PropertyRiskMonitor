@@ -1,88 +1,80 @@
 [
   {
     "state": "Abia",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 20.095,
-    "security_incident_index": 20,
-    "security_score": 23,
-    "security_confidence_score": 73,
-    "security_event_count_90d": 7,
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 19.179,
+    "security_incident_index": 22,
+    "security_score": 25,
+    "security_confidence_score": 69,
+    "security_event_count_90d": 5,
     "security_top_threat": "communal_clash",
     "top_threats": [
       {
         "category": "communal_clash",
-        "count": 4
-      },
-      {
-        "category": "bandit_attack",
-        "count": 3
+        "count": 5
       }
     ],
     "source_mix": {
       "acled": 0,
-      "news": 7,
+      "news": 5,
       "social": 0
     },
     "average_event_confidence": 0.56,
     "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Abuja",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 39.072,
-    "security_incident_index": 40,
-    "security_score": 43,
-    "security_confidence_score": 75,
-    "security_event_count_90d": 8,
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 33.957,
+    "security_incident_index": 39,
+    "security_score": 42,
+    "security_confidence_score": 81,
+    "security_event_count_90d": 11,
     "security_top_threat": "communal_clash",
     "top_threats": [
       {
         "category": "communal_clash",
-        "count": 6
+        "count": 9
       },
       {
         "category": "kidnapping",
-        "count": 1
-      },
-      {
-        "category": "bandit_attack",
-        "count": 1
+        "count": 2
       }
     ],
     "source_mix": {
       "acled": 0,
-      "news": 8,
+      "news": 11,
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.71,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Adamawa",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 108.959,
-    "security_incident_index": 100,
-    "security_score": 100,
-    "security_confidence_score": 94,
-    "security_event_count_90d": 19,
-    "security_top_threat": "kidnapping",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 62.277,
+    "security_incident_index": 71,
+    "security_score": 74,
+    "security_confidence_score": 90,
+    "security_event_count_90d": 16,
+    "security_top_threat": "communal_clash",
     "top_threats": [
       {
-        "category": "kidnapping",
-        "count": 8
+        "category": "communal_clash",
+        "count": 7
       },
       {
-        "category": "communal_clash",
-        "count": 8
+        "category": "kidnapping",
+        "count": 6
       },
       {
         "category": "terror_attack",
@@ -91,22 +83,22 @@
     ],
     "source_mix": {
       "acled": 0,
-      "news": 19,
+      "news": 16,
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.698,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Akwa Ibom",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 34.961,
-    "security_incident_index": 35,
-    "security_score": 39,
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 35.468,
+    "security_incident_index": 40,
+    "security_score": 44,
     "security_confidence_score": 75,
     "security_event_count_90d": 8,
     "security_top_threat": "kidnapping",
@@ -127,27 +119,62 @@
     },
     "average_event_confidence": 0.56,
     "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Anambra",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 10.766,
-    "security_incident_index": 11,
-    "security_score": 14,
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 4.652,
+    "security_incident_index": 5,
+    "security_score": 8,
+    "security_confidence_score": 67,
+    "security_event_count_90d": 4,
+    "security_top_threat": "communal_clash",
+    "top_threats": [
+      {
+        "category": "communal_clash",
+        "count": 3
+      },
+      {
+        "category": "kidnapping",
+        "count": 1
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 4,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Bauchi",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 50.385,
+    "security_incident_index": 57,
+    "security_score": 60,
     "security_confidence_score": 77,
     "security_event_count_90d": 9,
     "security_top_threat": "communal_clash",
     "top_threats": [
       {
         "category": "communal_clash",
-        "count": 8
+        "count": 5
       },
       {
         "category": "kidnapping",
+        "count": 2
+      },
+      {
+        "category": "terror_attack",
         "count": 1
       }
     ],
@@ -157,20 +184,272 @@
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.708,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
-    "state": "Bauchi",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 54.908,
-    "security_incident_index": 56,
-    "security_score": 59,
+    "state": "Bayelsa",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 29.041,
+    "security_incident_index": 33,
+    "security_score": 36,
+    "security_confidence_score": 69,
+    "security_event_count_90d": 5,
+    "security_top_threat": "communal_clash",
+    "top_threats": [
+      {
+        "category": "communal_clash",
+        "count": 5
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 5,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.722,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Benue",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 85.413,
+    "security_incident_index": 97,
+    "security_score": 100,
+    "security_confidence_score": 88,
+    "security_event_count_90d": 15,
+    "security_top_threat": "communal_clash",
+    "top_threats": [
+      {
+        "category": "communal_clash",
+        "count": 7
+      },
+      {
+        "category": "kidnapping",
+        "count": 6
+      },
+      {
+        "category": "bandit_attack",
+        "count": 1
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 15,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.711,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Borno",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 110.633,
+    "security_incident_index": 100,
+    "security_score": 100,
+    "security_confidence_score": 77,
+    "security_event_count_90d": 9,
+    "security_top_threat": "terror_attack",
+    "top_threats": [
+      {
+        "category": "terror_attack",
+        "count": 5
+      },
+      {
+        "category": "communal_clash",
+        "count": 2
+      },
+      {
+        "category": "kidnapping",
+        "count": 2
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 9,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.708,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Cross River",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 30.944,
+    "security_incident_index": 35,
+    "security_score": 39,
+    "security_confidence_score": 77,
+    "security_event_count_90d": 9,
+    "security_top_threat": "kidnapping",
+    "top_threats": [
+      {
+        "category": "kidnapping",
+        "count": 6
+      },
+      {
+        "category": "communal_clash",
+        "count": 3
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 9,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Delta",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 6.108,
+    "security_incident_index": 7,
+    "security_score": 9,
+    "security_confidence_score": 64,
+    "security_event_count_90d": 2,
+    "security_top_threat": "kidnapping",
+    "top_threats": [
+      {
+        "category": "kidnapping",
+        "count": 1
+      },
+      {
+        "category": "communal_clash",
+        "count": 1
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 2,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Ebonyi",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 91.058,
+    "security_incident_index": 100,
+    "security_score": 100,
     "security_confidence_score": 85,
     "security_event_count_90d": 13,
+    "security_top_threat": "kidnapping",
+    "top_threats": [
+      {
+        "category": "kidnapping",
+        "count": 8
+      },
+      {
+        "category": "communal_clash",
+        "count": 5
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 13,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Edo",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 83.34,
+    "security_incident_index": 95,
+    "security_score": 99,
+    "security_confidence_score": 94,
+    "security_event_count_90d": 19,
+    "security_top_threat": "kidnapping",
+    "top_threats": [
+      {
+        "category": "kidnapping",
+        "count": 9
+      },
+      {
+        "category": "communal_clash",
+        "count": 8
+      },
+      {
+        "category": "bandit_attack",
+        "count": 1
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 19,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.707,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Ekiti",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 3.292,
+    "security_incident_index": 4,
+    "security_score": 7,
+    "security_confidence_score": 66,
+    "security_event_count_90d": 3,
+    "security_top_threat": "communal_clash",
+    "top_threats": [
+      {
+        "category": "communal_clash",
+        "count": 3
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 3,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Enugu",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 33.194,
+    "security_incident_index": 38,
+    "security_score": 41,
+    "security_confidence_score": 77,
+    "security_event_count_90d": 9,
     "security_top_threat": "communal_clash",
     "top_threats": [
       {
@@ -179,10 +458,37 @@
       },
       {
         "category": "kidnapping",
-        "count": 5
+        "count": 3
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 9,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Gombe",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 44.572,
+    "security_incident_index": 51,
+    "security_score": 55,
+    "security_confidence_score": 85,
+    "security_event_count_90d": 13,
+    "security_top_threat": "kidnapping",
+    "top_threats": [
+      {
+        "category": "kidnapping",
+        "count": 11
       },
       {
-        "category": "bandit_attack",
+        "category": "communal_clash",
         "count": 2
       }
     ],
@@ -192,88 +498,22 @@
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.727,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.702,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
-    "state": "Bayelsa",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 26.318,
-    "security_incident_index": 27,
-    "security_score": 30,
-    "security_confidence_score": 67,
-    "security_event_count_90d": 4,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 4
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 4,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.73,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Benue",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 136.578,
-    "security_incident_index": 100,
-    "security_score": 100,
-    "security_confidence_score": 94,
-    "security_event_count_90d": 23,
+    "state": "Imo",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 25.788,
+    "security_incident_index": 29,
+    "security_score": 33,
+    "security_confidence_score": 69,
+    "security_event_count_90d": 5,
     "security_top_threat": "kidnapping",
     "top_threats": [
-      {
-        "category": "kidnapping",
-        "count": 13
-      },
-      {
-        "category": "communal_clash",
-        "count": 8
-      },
-      {
-        "category": "bandit_attack",
-        "count": 1
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 23,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.739,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Borno",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 35.363,
-    "security_incident_index": 36,
-    "security_score": 39,
-    "security_confidence_score": 83,
-    "security_event_count_90d": 12,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 8
-      },
       {
         "category": "kidnapping",
         "count": 3
@@ -281,67 +521,9 @@
       {
         "category": "terror_attack",
         "count": 1
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 12,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Cross River",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 36.455,
-    "security_incident_index": 37,
-    "security_score": 41,
-    "security_confidence_score": 79,
-    "security_event_count_90d": 10,
-    "security_top_threat": "kidnapping",
-    "top_threats": [
-      {
-        "category": "kidnapping",
-        "count": 6
       },
       {
         "category": "communal_clash",
-        "count": 4
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 10,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Delta",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 15.013,
-    "security_incident_index": 15,
-    "security_score": 18,
-    "security_confidence_score": 69,
-    "security_event_count_90d": 5,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 4
-      },
-      {
-        "category": "kidnapping",
         "count": 1
       }
     ],
@@ -352,108 +534,85 @@
     },
     "average_event_confidence": 0.56,
     "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
-    "state": "Ebonyi",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 10.277,
-    "security_incident_index": 10,
-    "security_score": 13,
-    "security_confidence_score": 67,
-    "security_event_count_90d": 4,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 4
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 4,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Edo",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 100.966,
-    "security_incident_index": 100,
-    "security_score": 100,
-    "security_confidence_score": 94,
-    "security_event_count_90d": 21,
+    "state": "Jigawa",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 17.057,
+    "security_incident_index": 19,
+    "security_score": 23,
+    "security_confidence_score": 69,
+    "security_event_count_90d": 5,
     "security_top_threat": "kidnapping",
     "top_threats": [
       {
         "category": "kidnapping",
-        "count": 10
+        "count": 3
       },
       {
         "category": "communal_clash",
-        "count": 10
+        "count": 2
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 5,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Kaduna",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 92.57,
+    "security_incident_index": 100,
+    "security_score": 100,
+    "security_confidence_score": 94,
+    "security_event_count_90d": 20,
+    "security_top_threat": "kidnapping",
+    "top_threats": [
+      {
+        "category": "kidnapping",
+        "count": 15
       },
       {
-        "category": "terror_attack",
+        "category": "communal_clash",
+        "count": 4
+      },
+      {
+        "category": "bandit_attack",
         "count": 1
       }
     ],
     "source_mix": {
       "acled": 0,
-      "news": 21,
+      "news": 20,
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.705,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.706,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
-    "state": "Ekiti",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 9.131,
-    "security_incident_index": 9,
-    "security_score": 12,
-    "security_confidence_score": 67,
-    "security_event_count_90d": 4,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 4
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 4,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Enugu",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 16.826,
-    "security_incident_index": 17,
-    "security_score": 20,
-    "security_confidence_score": 75,
-    "security_event_count_90d": 8,
+    "state": "Kano",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 23.229,
+    "security_incident_index": 26,
+    "security_score": 29,
+    "security_confidence_score": 73,
+    "security_event_count_90d": 7,
     "security_top_threat": "communal_clash",
     "top_threats": [
       {
@@ -462,93 +621,120 @@
       },
       {
         "category": "kidnapping",
-        "count": 2
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 8,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Gombe",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 39.827,
-    "security_incident_index": 40,
-    "security_score": 44,
-    "security_confidence_score": 83,
-    "security_event_count_90d": 12,
-    "security_top_threat": "kidnapping",
-    "top_threats": [
-      {
-        "category": "kidnapping",
-        "count": 11
-      },
-      {
-        "category": "communal_clash",
         "count": 1
       }
     ],
     "source_mix": {
       "acled": 0,
-      "news": 12,
+      "news": 7,
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.703,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
-    "state": "Imo",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 35.778,
-    "security_incident_index": 36,
-    "security_score": 40,
-    "security_confidence_score": 83,
-    "security_event_count_90d": 12,
-    "security_top_threat": "kidnapping",
+    "state": "Katsina",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 83.766,
+    "security_incident_index": 96,
+    "security_score": 99,
+    "security_confidence_score": 79,
+    "security_event_count_90d": 10,
+    "security_top_threat": "communal_clash",
     "top_threats": [
       {
-        "category": "kidnapping",
-        "count": 7
-      },
-      {
         "category": "communal_clash",
-        "count": 2
+        "count": 6
       },
       {
         "category": "bandit_attack",
-        "count": 2
+        "count": 4
       }
     ],
     "source_mix": {
       "acled": 0,
-      "news": 12,
+      "news": 10,
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.703,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.706,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
-    "state": "Jigawa",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 16.517,
-    "security_incident_index": 17,
-    "security_score": 20,
+    "state": "Kebbi",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 24.633,
+    "security_incident_index": 28,
+    "security_score": 31,
+    "security_confidence_score": 67,
+    "security_event_count_90d": 4,
+    "security_top_threat": "communal_clash",
+    "top_threats": [
+      {
+        "category": "communal_clash",
+        "count": 3
+      },
+      {
+        "category": "bandit_attack",
+        "count": 1
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 4,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.69,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Kogi",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 44.066,
+    "security_incident_index": 50,
+    "security_score": 53,
+    "security_confidence_score": 86,
+    "security_event_count_90d": 14,
+    "security_top_threat": "communal_clash",
+    "top_threats": [
+      {
+        "category": "communal_clash",
+        "count": 9
+      },
+      {
+        "category": "kidnapping",
+        "count": 5
+      }
+    ],
+    "source_mix": {
+      "acled": 0,
+      "news": 14,
+      "social": 0
+    },
+    "average_event_confidence": 0.56,
+    "average_relevance": 0.701,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
+    "publish_source_stamp": "2026-Q1"
+  },
+  {
+    "state": "Kwara",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 48.857,
+    "security_incident_index": 56,
+    "security_score": 59,
     "security_confidence_score": 81,
     "security_event_count_90d": 11,
     "security_top_threat": "communal_clash",
@@ -559,7 +745,11 @@
       },
       {
         "category": "kidnapping",
-        "count": 3
+        "count": 1
+      },
+      {
+        "category": "bandit_attack",
+        "count": 1
       }
     ],
     "source_mix": {
@@ -568,214 +758,20 @@
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.705,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Kaduna",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 97.265,
-    "security_incident_index": 99,
-    "security_score": 100,
-    "security_confidence_score": 94,
-    "security_event_count_90d": 19,
-    "security_top_threat": "kidnapping",
-    "top_threats": [
-      {
-        "category": "kidnapping",
-        "count": 17
-      },
-      {
-        "category": "communal_clash",
-        "count": 2
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 19,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.707,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Kano",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 23.956,
-    "security_incident_index": 24,
-    "security_score": 27,
-    "security_confidence_score": 77,
-    "security_event_count_90d": 9,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 6
-      },
-      {
-        "category": "kidnapping",
-        "count": 2
-      },
-      {
-        "category": "bandit_attack",
-        "count": 1
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 9,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.708,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Katsina",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 64.502,
-    "security_incident_index": 65,
-    "security_score": 70,
-    "security_confidence_score": 77,
-    "security_event_count_90d": 9,
-    "security_top_threat": "bandit_attack",
-    "top_threats": [
-      {
-        "category": "bandit_attack",
-        "count": 5
-      },
-      {
-        "category": "communal_clash",
-        "count": 4
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 9,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.708,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Kebbi",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 52.276,
-    "security_incident_index": 53,
-    "security_score": 56,
-    "security_confidence_score": 75,
-    "security_event_count_90d": 8,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 7
-      },
-      {
-        "category": "kidnapping",
-        "count": 1
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 8,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
     "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Kogi",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 35.734,
-    "security_incident_index": 36,
-    "security_score": 40,
-    "security_confidence_score": 94,
-    "security_event_count_90d": 18,
-    "security_top_threat": "kidnapping",
-    "top_threats": [
-      {
-        "category": "kidnapping",
-        "count": 10
-      },
-      {
-        "category": "communal_clash",
-        "count": 8
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 18,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.699,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
-    "publish_source_stamp": "2026-Q1"
-  },
-  {
-    "state": "Kwara",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 54.29,
-    "security_incident_index": 55,
-    "security_score": 58,
-    "security_confidence_score": 83,
-    "security_event_count_90d": 12,
-    "security_top_threat": "communal_clash",
-    "top_threats": [
-      {
-        "category": "communal_clash",
-        "count": 8
-      },
-      {
-        "category": "kidnapping",
-        "count": 3
-      },
-      {
-        "category": "bandit_attack",
-        "count": 1
-      }
-    ],
-    "source_mix": {
-      "acled": 0,
-      "news": 12,
-      "social": 0
-    },
-    "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Lagos",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 40.391,
-    "security_incident_index": 41,
-    "security_score": 44,
-    "security_confidence_score": 83,
-    "security_event_count_90d": 12,
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 53.43,
+    "security_incident_index": 61,
+    "security_score": 64,
+    "security_confidence_score": 85,
+    "security_event_count_90d": 13,
     "security_top_threat": "communal_clash",
     "top_threats": [
       {
@@ -784,25 +780,25 @@
       },
       {
         "category": "kidnapping",
-        "count": 3
+        "count": 4
       }
     ],
     "source_mix": {
       "acled": 0,
-      "news": 12,
+      "news": 13,
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.702,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Nasarawa",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 17.958,
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 15.37,
     "security_incident_index": 18,
     "security_score": 21,
     "security_confidence_score": 71,
@@ -825,28 +821,28 @@
     },
     "average_event_confidence": 0.56,
     "average_relevance": 0.69,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Niger",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
-    "raw_security_pressure": 537.953,
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
+    "raw_security_pressure": 551.81,
     "security_incident_index": 100,
     "security_score": 100,
     "security_confidence_score": 94,
-    "security_event_count_90d": 141,
+    "security_event_count_90d": 129,
     "security_top_threat": "communal_clash",
     "top_threats": [
       {
         "category": "communal_clash",
-        "count": 69
+        "count": 68
       },
       {
         "category": "kidnapping",
-        "count": 55
+        "count": 44
       },
       {
         "category": "bandit_attack",
@@ -855,19 +851,19 @@
     ],
     "source_mix": {
       "acled": 0,
-      "news": 141,
+      "news": 129,
       "social": 0
     },
     "average_event_confidence": 0.56,
-    "average_relevance": 0.695,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "average_relevance": 0.697,
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Ogun",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -882,14 +878,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Ondo",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -904,14 +900,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Osun",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -926,14 +922,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Oyo",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -948,14 +944,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Plateau",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -970,14 +966,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Rivers",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -992,14 +988,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Sokoto",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -1014,14 +1010,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Taraba",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -1036,14 +1032,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Yobe",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -1058,14 +1054,14 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   },
   {
     "state": "Zamfara",
-    "window_start": "2025-12-02T04:22:29.090Z",
-    "window_end": "2026-03-02T04:22:29.090Z",
+    "window_start": "2025-12-09T04:25:42.040Z",
+    "window_end": "2026-03-09T04:25:42.040Z",
     "raw_security_pressure": 0,
     "security_incident_index": 0,
     "security_score": 0,
@@ -1080,8 +1076,8 @@
     },
     "average_event_confidence": 0,
     "average_relevance": 0,
-    "last_ingest_refresh": "2026-03-02T04:22:29.090Z",
-    "ingest_source_stamp": "2026-W10",
+    "last_ingest_refresh": "2026-03-09T04:25:42.040Z",
+    "ingest_source_stamp": "2026-W11",
     "publish_source_stamp": "2026-Q1"
   }
 ]
