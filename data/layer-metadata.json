@@ -16,7 +16,7 @@
     "source_name": "OpenStreetMap Roads",
     "source_url": "https://www.openstreetmap.org/",
     "update_frequency": "weekly",
-    "last_refresh": "2026-03-15T03:29:56.422Z",
+    "last_refresh": "2026-03-22T03:20:19.365Z",
     "coverage_notes": "Distance-to-major-road and road-density proxy at state aggregation level."
   },
   {
