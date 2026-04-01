@@ -6,7 +6,7 @@
     "source_name": "JRC Global Surface Water + SRTM Elevation",
     "source_url": "https://global-surface-water.appspot.com/",
     "update_frequency": "quarterly",
-    "last_refresh": "2026-02-17T06:00:57.473Z",
+    "last_refresh": "2026-04-01T03:44:06.052Z",
     "coverage_notes": "State-level risk baseline built from open hydrology and elevation datasets."
   },
   {
@@ -26,7 +26,7 @@
     "source_name": "NASA VIIRS Black Marble",
     "source_url": "https://blackmarble.gsfc.nasa.gov/",
     "update_frequency": "monthly",
-    "last_refresh": "2026-03-01T03:22:58.441Z",
+    "last_refresh": "2026-04-01T03:44:06.959Z",
     "coverage_notes": "Radiance and trend signals converted to a normalized development activity score."
   },
   {
@@ -36,7 +36,7 @@
     "source_name": "CHIRPS Precipitation (modeled refresh)",
     "source_url": "https://www.chc.ucsb.edu/data/chirps",
     "update_frequency": "monthly",
-    "last_refresh": "2026-03-01T03:22:58.913Z",
+    "last_refresh": "2026-04-01T03:44:07.416Z",
     "coverage_notes": "Rainfall anomaly and volatility signals normalized for property context."
   },
   {
@@ -46,7 +46,7 @@
     "source_name": "WorldPop Population Estimates (modeled refresh)",
     "source_url": "https://www.worldpop.org/",
     "update_frequency": "quarterly",
-    "last_refresh": "2026-02-17T06:26:49.701Z",
+    "last_refresh": "2026-04-01T03:44:07.872Z",
     "coverage_notes": "Population density and growth pressure scores normalized by state."
   },
   {
