@@ -2,8 +2,8 @@
   "source_name": "Google News RSS + Wikipedia",
   "source_url": "https://news.google.com/rss",
   "update_frequency": "weekly",
-  "last_refresh": "2026-04-06T04:22:37.903Z",
-  "source_stamp": "2026-W15",
+  "last_refresh": "2026-04-13T04:37:49.309Z",
+  "source_stamp": "2026-W16",
   "coverage_notes": "State-level categorized news snapshots (good news, local news, dispute signals) with summary and image context.",
   "states_processed": 37
 }
