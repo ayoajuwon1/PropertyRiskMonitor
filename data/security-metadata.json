@@ -3,15 +3,15 @@
   "source_url": "https://acleddata.com/, https://news.google.com/rss",
   "ingest_frequency": "weekly",
   "publish_frequency": "quarterly",
-  "last_ingest_refresh": "2026-04-06T04:52:13.120Z",
+  "last_ingest_refresh": "2026-04-13T05:22:20.273Z",
   "last_publish_refresh": "2026-04-06T04:52:13.120Z",
-  "ingest_source_stamp": "2026-W15",
+  "ingest_source_stamp": "2026-W16",
   "publish_source_stamp": "2026-Q2",
   "coverage_notes": "Quarterly-published security baseline from rolling 90-day Nigeria-specific insecurity events, with weekly ingestion updates.",
   "source_mix": [
     "news"
   ],
   "states_processed": 37,
-  "events_processed_90d": 538,
-  "national_confidence_score": 72
+  "events_processed_90d": 528,
+  "national_confidence_score": 73
 }
